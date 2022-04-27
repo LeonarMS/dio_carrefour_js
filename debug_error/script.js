@@ -1,7 +1,7 @@
 function evalArr (arr, len) {
     if (!arr || !len) throw new ReferenceError('Missing argument');
     if (typeof len !== 'number') throw new TypeError(len + ', ' + typeof len + ' is not a number');
-    if (!(arr instanceof Object)) throw new TypeError('Not an Array'); 
+    if (typeof arr !== 'object') throw new TypeError('Not an Array'); 
 
     if (arr.length == len) return arr;
     throw new RangeError('Array.length is greater than ' + len);
