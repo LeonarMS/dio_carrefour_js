@@ -11,7 +11,23 @@ function tryEval (arr, len) {
     try {
        return evalArr(arr, len);
     } catch(e) {
-        throw e
+        if (e instanceof TypeError) {
+            console.log('Error is TypeError');
+            console.log(e.message);
+            throw e
+        }
+        else if (e instanceof RangeError) {
+            console.log('Error is RangeError');
+            console.log(e.message);
+            throw e
+        }
+         else if (e instanceof ReferenceError) {
+            console.log('Error is ReferenceError');
+            console.log(e.message);
+            throw e
+        } else {
+            console.log('Tipo de erro não esperado: ' + e);
+        }
     }
 }
 
