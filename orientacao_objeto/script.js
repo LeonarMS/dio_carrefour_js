@@ -56,6 +56,6 @@ class ContaUniversitaria extends ContaBancaria {
 const uni = new ContaUniversitaria(432, 'avb', 700, 123)
 
 console.log(uni.saldo);
-uni.saldo(350);
+uni.saldo = 350;
 console.log(uni)
 uni.sacar(325)
