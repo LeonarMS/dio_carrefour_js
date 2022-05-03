@@ -1,0 +1,15 @@
+function subtraiSaldo (precos, saldo) {
+    return precos.reduce((resto, item) => {
+        return resto - item
+    }, saldo)
+}
+
+const listaDeCompras = {
+    bolacha: 100,
+    agua: 255,
+    pao: 33
+};
+
+const saldo = 1000;
+
+console.log(subtraiSaldo(Object.values(listaDeCompras), saldo))
